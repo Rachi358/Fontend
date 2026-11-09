@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ichard</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+
+    <script>
+        function bodyLoad(){
+            //By using dom hierarchy set img, name, age and city=delhi, button=Register
+            window.document.images[0].src="../public/images/background.jpg"
+            window.document.forms[0].elements[0].value='Rachit';
+            window.document.forms[0].elements[1].value=22;
+            window.document.forms[0].elements[2].value="Delhi"
+            window.document.forms[0].elements[3].value="Register";
+        }
+    </script>
+</head>
+<body class="p-5" onload="bodyLoad()">
+    <form action="" class="border h-75 w-50 d-flex flex-column p-3">
+        <img alt="" class="border rounded-circle" height="100" width="100">
+
+        <dl>
+            <dt>User Name</dt>
+            <dd><input type="text" placeholder="unsername"></dd>
+
+            <dt>Age</dt>
+            <dd><input type="number"></dd>
+
+            <dt>City</dt>
+            <dd>
+                <select name="option">
+                    <option value="0">Select City</option>
+                    <option value="1">Delhi</option>
+                    <option value="2">Hyd</option>
+                </select>
+            </dd>
+        </dl>
+
+        <dl>
+            <dd><input type="button" style="height: 30px; width: 100%;"></dd>
+        </dl>
+
+    </form>
+</body>
+</html>

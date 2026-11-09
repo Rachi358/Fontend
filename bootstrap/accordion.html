@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>accordion</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+
+</head>
+<body>
+    <div class="accordion" id="education">
+        <div class="accordion-item">
+            <div class="accordion-header">
+                <button class="accordion-button" data-bs-target="#naresh" data-bs-toggle="collapse">NareshIT</button>
+            </div>
+
+            <div class="accordion-collapse collapse" id="naresh" data-bs-parent="#education">
+                <div class="accordion-body" >
+                    <p>About NareshIT</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <div class="accordion-header">
+                <button class="accordion-button" data-bs-target="#btech" data-bs-toggle="collapse">Btech</button>
+            </div>
+
+            <div class="accordion-collapse collapse" id="btech" data-bs-parent="#education">
+                <div class="accordion-body" >
+                    <p>About Btech</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <div class="accordion-header">
+                <button class="accordion-button" data-bs-target="#couse" data-bs-toggle="collapse">Coursess</button>
+            </div>
+
+            <div class="accordion-collapse collapse" id="couse" data-bs-parent="#education"> 
+                <div class="accordion-body">
+                    <p>About Coursess</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

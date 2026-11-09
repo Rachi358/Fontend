@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product-Details</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+
+    <script>
+        function ProductDetails() {
+            params = new URLSearchParams(location.search);
+            document.getElementById('Proname').textContent = params.get('name');
+            document.getElementById('Proprice').textContent = params.get('price');
+            document.getElementById('Prorating').textContent = params.get('rating');
+            document.getElementById('Probrand').textContent = params.get('brand');
+        }
+    </script>
+</head>
+
+<body onload="ProductDetails()">
+    <div class="container border w-50 h-75 m-8 p-5">
+        <h2>Product-Details</h2>
+        <dl class="mb-4">
+            <dt>Name: </dt>
+            <dd id="Proname"></dd>
+
+            <dt>Price: </dt>
+            <dd id="Proprice"></dd>
+
+            <dt>Rating: </dt>
+            <dd id="Prorating"></dd>
+
+            <dt>Brand: </dt>
+            <dd id="Probrand"></dd>
+        </dl>
+        <a href="./product.html" class="text-decoration-none">Go to back</a>
+    </div>
+
+</body>
+
+</html>

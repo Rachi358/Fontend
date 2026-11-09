@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</head>
+<body>
+    <div class="container border w-50 h-75 m-8 p-5">
+        <h2>Products Form</h2>
+        <form action="./details.html" class="p-4" method="get">
+            <div class="mb-4">
+                <label for="name" class="label-form-control">name</label>
+                <input type="text" name="name" placeholder="Product name" class="form-control">
+            </div>
+
+            <div class="mb-4">
+                <label for="price" class="label-form-control">price</label>
+                <input type="number" name="price" placeholder="Price" class="form-control">
+            </div>
+
+            <div class="mb-4">
+                <label for="rating" class="label-form-control">Rating</label>
+                <input type="range" name="rating" min="1" max="5" class="form-control>
+            </div>
+
+            <div class="mb-4">
+                <label for="brand" class="label-form-control">brand</label>
+                <select name="brand" id="brand">
+                    <option>Select Brand Name</option>
+                    <option >Sonny</option>
+                    <option >LG</option>
+                    <option >Apple</option>
+                </select>
+            </div>
+
+            <button class="btn">Submit</button>
+        </form>
+    </div>
+
+</body>
+
+</html>

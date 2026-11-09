@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        function ChangeCase(){
+            var pan = document.getElementById('pan').value;
+            document.getElementById("pan").value = pan.toUpperCase();
+        }
+
+        function Fonts(){
+            var word = document.querySelector('p');
+            var fontStyle = document.getElementById('lststyle').value;
+            var fontSize = document.getElementById('txtsize').value;
+            var fontcolor = document.getElementById('color').value;
+            word.innerHTML = 'Wellcome'.fontsize(fontSize);
+            
+            if(fontStyle === 'Bold'){
+                word.innerHTML = "Wellcome".fontsize(fontSize).bold().fontcolor(fontcolor);
+            }else{
+                word.innerHTML = 'Wellcome'.fontsize(fontSize).italics().fontcolor(fontcolor);
+            }
+
+        }
+    </script>
+</head>
+<body>
+    
+    <dl>
+        <dt>PAN Number</dt>
+        <dd><input type="text" id="pan" onkeyup="ChangeCase()"></dd>
+    </dl>
+
+    <dl>
+        <dt>Font Style</dt>
+        <dd>
+            <select name="" id="lststyle">
+                <option>Select style</option>
+                <option>Bold</option>
+                <option>Italic</option>
+            </select>
+        </dd>
+
+        <dt>Font size</dt>
+        <dd>
+            <input type="range" id="txtsize" min="1" max="7" value="1">
+        </dd>
+
+        <dt>color</dt>
+        <dd>
+            <input type="color" id="color">
+        </dd>
+    </dl>
+
+    <button onclick="Fonts()">Apply</button>
+    <p>Wellcome</p>
+</body>
+</html>

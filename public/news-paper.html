@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>news</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <style>
+        article{
+            border: 5px solid black;
+            padding: 20px;
+            width: 900px;
+            font-family: Arial;
+            box-shadow: 10px 10px 10px black;
+        }
+        header{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+        .social{
+            color: red;
+            font-size: 25px;
+
+        }
+        .social span{
+            margin-right: 20px;
+            border: 1px solid red;
+            padding: 10px;
+            border-radius: 100%;
+
+        }
+        .page{
+            font-size: 20px;
+            color: blue;
+            font-weight: bold;
+        }
+        .news-title{
+            font-size: 43px;
+            font-weight: bold;
+            text-shadow: 2px 2px 5px yellow;
+            letter-spacing: 2px;
+        }
+        .news{
+            text-align: justify;
+            font-size: 14px;
+            columns: 5;
+            margin-top: 20px;
+            column-gap: 20px;
+            column-rule: 1px dotted gray;
+        }
+        .caption{
+            font-size: 14px;
+            font-weight: bold;
+        }
+        .hilight{
+            background-color: rgb(98, 98, 240);
+            color: white;
+            
+        }
+        p::first-letter{
+            font-size: 30px;
+            font-weight: bold;
+            float: left;
+            /* line-height: 35px; */
+
+        }
+    </style>
+</head>
+<body>
+    <article>
+        <header>
+            <div class="social">
+                <span class="bi bi-envelope"></span>
+                <span class="bi bi-facebook"></span>
+                <span class="bi bi-twitter"></span>
+                <span class="bi bi-messenger"></span>
+                <span class="bi bi-linkedin"></span>
+            </div>
+            <div class="page">
+               <span>Viewed-199</span>
+               <span>|</span>
+               <span>Back</span>
+               <span>|</span>
+               <span>Home</span>
+            </div>
+        </header>
+        <section>
+            <div class="news-title">Man held <span class="hilight">in &#8377;1cr boss impersonation scam</span> </div>
+            <div class="news">
+                <div class="caption">DC CORRESPONDENT</div>
+                <div>Hyderaba, Aug 19</div>
+                <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae officia, in praesentium odio adipisci ratione consequatur quod exercitationem. Dolores deleniti vel aspernatur magnam repudiandae provident fuga culpa ducimus nisi ipsam.</p>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus, consequuntur? Quo doloribus corrupti, debitis molestias error quae repellendus neque necessitatibus deserunt voluptates ratione expedita sint exercitationem nisi nam dolor voluptatibus.</p>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint fugiat repudiandae facere veritatis, magnam ipsum totam consequuntur similique tenetur sequi soluta rem provident necessitatibus et hic corrupti, debitis odit. Tempore!</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat doloremque voluptatum magnam eius, molestias eos nihil id illo in nulla sed ea esse accusamus distinctio quaerat provident recusandae dolore quod.</p> -->
+                <!-- <p class="dropcp">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Commodi fugit, itaque recusandae obcaecati enim excepturi incidunt. Possimus quaerat, accusantium iste explicabo, quisquam reprehenderit expedita voluptate consequuntur voluptatibus quasi quae consectetur?</p> -->
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique ad a maiores vel iste voluptas at, expedita doloribus nisi dolorum! Laborum placeat corrupti odit ipsa quis expedita consectetur beatae doloribus?
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquid iure sequi eligendi provident veniam perferendis voluptates id dolorum non doloribus, repudiandae quae eum, consectetur omnis vero dolores cumque? Debitis, nam!Lorem
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis molestias ducimus similique magnam animi sit, eius voluptates dolorum, numquam eaque voluptate esse? Quod eos sed eaque. Vero neque soluta perspiciatis!
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, esse delectus neque amet cupiditate quia odio ipsa dolore voluptas fugit cum, quisquam nemo placeat quasi eaque exercitationem! Nostrum, quis sequi?
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique ad a maiores vel iste voluptas at, expedita doloribus nisi dolorum! Laborum placeat corrupti odit ipsa quis expedita consectetur beatae doloribus?
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquid iure sequi eligendi provident veniam perferendis voluptates id dolorum non doloribus, repudiandae quae eum, consectetur omnis vero dolores cumque? Debitis, nam!Lorem
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis molestias ducimus similique magnam animi sit, eius voluptates dolorum, numquam eaque voluptate esse? Quod eos sed eaque. Vero neque soluta perspiciatis!
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, esse delectus neque amet cupiditate quia odio ipsa dolore voluptas fugit cum, quisquam nemo placeat quasi eaque exercitationem! Nostrum, quis sequi?
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique ad a maiores vel iste voluptas at, expedita doloribus nisi dolorum! Laborum placeat corrupti odit ipsa quis expedita consectetur beatae doloribus?
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquid iure sequi eligendi provident veniam perferendis voluptates id dolorum non doloribus, repudiandae quae eum, consectetur omnis vero dolores cumque? Debitis, nam!Lorem
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis molestias ducimus similique magnam animi sit, eius voluptates dolorum, numquam eaque voluptate esse? Quod eos sed eaque. Vero neque soluta perspiciatis!
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, esse delectus neque amet cupiditate quia odio ipsa dolore voluptas fugit cum, quisquam nemo placeat quasi eaque exercitationem! Nostrum, quis sequi?
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique ad a maiores vel iste voluptas at, expedita doloribus nisi dolorum! Laborum placeat corrupti odit ipsa quis expedita consectetur beatae doloribus?
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquid iure sequi eligendi provident veniam perferendis voluptates id dolorum non doloribus, repudiandae quae eum, consectetur omnis vero dolores cumque? Debitis, nam!Lorem
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis molestias ducimus similique magnam animi sit, eius voluptates dolorum, numquam eaque voluptate esse? Quod eos sed eaque. Vero neque soluta perspiciatis!
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, esse delectus neque amet cupiditate quia odio ipsa dolore voluptas fugit cum, quisquam nemo placeat quasi eaque exercitationem! Nostrum, quis sequi?
+                </p>
+            </div>
+        </section>
+    </article>
+    
+</body>
+</html>

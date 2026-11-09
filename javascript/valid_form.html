@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script>
+        function verifyUsername(){
+            var unsername = document.getElementById('txtName').value;
+            var charCode = unsername.charCodeAt(0);
+            console.log(charCode)
+            if (unsername.length===0){
+                document.getElementById('lblName').innerHTML = 'Username is required'.fontsize(2).fontcolor('red');
+            }else{
+                if(charCode >= 65 && charCode <= 90){
+                    document.getElementById('lblName').innerHTML ='valid'.fontsize(2).fontcolor('green');
+                }else{
+                    document.getElementById('lblName').innerHTML = 'Username must start with uppercase'.fontsize(2).fontcolor('red');
+                }
+            }
+        }
+
+        function verifyEmail(){
+            var email = document.getElementById('txtEmail').value;
+            if(email.indexOf('@')===-1){
+                document.getElementById('lblEmail').innerHTML = 'Please include "@"'.fontsize(2).fontcolor('red')
+            }else{
+                if(email.endsWith('gmail.com')){
+                    document.getElementById('lblEmail').innerHTML = ''
+                }
+                else{
+                    document.getElementById('lblEmail').innerHTML ='Invalid Email'.fontsize(2).fontcolor('red')
+                }
+            }
+        }
+
+        function verifyComment(){
+            var comments = document.getElementById('txtComment').value;
+            document.getElementById('lblComment').innerHTML = `${100 - comments.length} char is remaining`.fontsize(2).fontcolor('gold')
+        }
+    </script>
+</head>
+<body>
+    <div class="container p-5">
+        <dl>
+            <dt>username:</dt>
+            <dd>
+                <input type="text" id="txtName" class="form-control" onblur="verifyUsername()" onkeyup="verifyUsername()">
+            </dd>
+            <dd id="lblName"></dd>
+
+            <dt>Gmail:</dt>
+            <dd>
+                <input type="text" id="txtEmail" class="form-control" onblur="verifyEmail()">
+            </dd>
+            <dd id="lblEmail"></dd>
+
+            <dt>comments:</dt>
+            <dd>
+                <textarea name="" id="txtComment" class="form-control" onblur="verifyComment()" onkeyup="verifyComment()" rows="4" cols="40" maxlength="100"></textarea>
+            </dd>
+            <dd id="lblComment"></dd>
+        </dl>
+    </div>
+</body>
+</html>

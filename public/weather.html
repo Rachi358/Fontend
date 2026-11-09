@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>weather</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <style>
+        nav {
+            width: 300px;
+            background-color: whitesmoke;
+            padding: 20px;
+            font-family: Arial;
+            height: 550px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+        }
+
+        .bi-clouds-fill {
+            font-size: 30px;
+            font-weight: bold;
+            padding-bottom: 10px;
+
+        }
+
+        .nav-subtitle {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        .btn-add {
+            background-color: black;
+            color: white;
+            text-align: center;
+            font-size: 20px;
+            padding: 10px;
+        }
+
+        .nav-menu {
+            list-style: none;
+            margin-top: 30px;
+            margin-left: -40px;
+        }
+
+        .nav-menu li {
+            padding: 10px;
+            margin-bottom: 10px;
+            margin-top: 10px;
+            background-color: rgb(237, 236, 236);
+            font-size: 20px;
+        }
+
+        .btn-signout {
+            padding: 10px;
+            background-color: rgb(127, 125, 125);
+            color: white;
+            text-align: center;
+            font-size: 20px;
+        }
+
+        body {
+            display: grid;
+            grid-template-columns: 3fr 9fr;
+        }
+
+        main {
+            background-color: rgb(90, 158, 243);
+            height: 550px;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div>
+            <div class="bi bi-clouds-fill">SkyCast</div>
+            <div class="nav-subtitle">PROFESSIONAL WEATHER</div>
+
+            <div class="btn-add">
+                <span class="bi bi-plus-lg"></span>
+                <span>Add Location</span>
+            </div>
+
+            <ul class="nav-menu">
+                <li class="bi bi-columns-gap"><span>Dashboard</span></li>
+                <li class="bi bi-calendar-date"><span>Forecast</span></li>
+                <li class="bi bi-radar"><span>Radar</span></li>
+                <li class="bi bi-wind"><span>Air Quality</span></li>
+                <li class="bi bi-gear"><span>Setting</span></li>
+            </ul>
+        </div>
+        <div>
+            <div>
+                <div class="btn-signout">
+                    <span class="bi bi-box-arrow-right">Signout</span>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <main>
+
+    </main>
+</body>
+
+</html>

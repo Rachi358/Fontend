@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+
+    <style>
+        table {
+
+            font-family: Arial;
+
+            width: 100%;
+
+        }
+
+        .flag {
+
+            width: 40px;
+
+        }
+
+        .player-img {
+
+            width: 150px;
+
+        }
+
+        .player {
+
+            display: grid;
+
+            grid-template-columns: 6fr 6fr;
+
+        }
+
+        .name-container {
+
+            display: flex;
+
+            flex-direction: column;
+
+            justify-content: center;
+
+            align-items: center;
+
+        }
+
+        .last-name {
+
+            font-size: 30px;
+
+            font-weight: bold;
+
+        }
+
+        caption {
+
+            font-size: 25px;
+
+            color: gray;
+
+            font-weight: bold;
+
+            margin-bottom: 30px;
+
+            text-align: left;
+
+        }
+
+        td {
+
+            background-size: cover;
+
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <table rules="rows" cellspacing="0" cellpadding="20" frame="box">
+        <caption>ICC - ODI BATTING RANKINGS</caption>
+        <colgroup span="1"></colgroup>
+        <thead bgcolor="yellow">
+            <tr>
+
+                <th width="50">POS</th>
+
+                <th width="200">TEAM</th>
+
+                <th width="200">Player</th>
+
+                <th>Ranking</th>
+
+                <th>Career Best Rating</th>
+
+            </tr>
+
+        </thead>
+
+        <tbody>
+
+            <tr align="center" height="200">
+
+                <td>01 <span class="bi bi-dot"></span> </td>
+
+                <td>
+
+                    <img src="./images/india.png" class="flag">
+
+                    <span class="country-name">IND</span>
+
+                </td>
+
+                <td class="player" background="./images/icc.png">
+
+                    <div class="name-container">
+
+                        <span class="first-name">Shubman</span>
+
+                        <span class="last-name">GILL</span>
+
+                    </div>
+
+                    <div>
+
+                        <img src="./images/shubman.webp" class="player-img">
+
+                    </div>
+
+                </td>
+
+                <td>
+
+                    801
+
+                </td>
+
+                <td>
+
+                    841 v Australia at Indore 2023
+
+                </td>
+
+            </tr>
+
+            <tr align="center">
+
+                <td>02 <span class="bi bi-dot"></span> </td>
+
+                <td>
+
+                    <img src="./images/nz.png" class="flag">
+
+                    <span class="country-name">NEW ZEALAND</span>
+
+                </td>
+
+                <td>
+
+                    Daryl MITCHELL
+
+                </td>
+
+                <td>794</td>
+
+                <td>840 v India at Indore 2026</td>
+
+            </tr>
+
+        </tbody>
+
+        <tfoot>
+
+            <tr>
+
+                <td colspan="5" align="center">&copy; copyright ICC 2026</td>
+
+            </tr>
+
+        </tfoot>
+
+    </table>
+
+</body>
+
+</html>

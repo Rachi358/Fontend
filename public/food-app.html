@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food-App</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        nav{
+            background-color: white;
+            height: 100vh;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            font-family: Arial;
+            /* border: 1px solid black; */
+        }
+        body{
+            display: grid;
+            grid-template-columns: 2fr 10fr;
+        }
+        .sub-title{
+            
+        }
+        .appimg{
+            color: orange;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-weight: bold;
+
+        }
+        .appimg img{
+            border: 1px solid black;
+            margin: 2px;
+            gap: 2px;
+        }
+        .nav-menu{
+            margin-right: 12px;
+            gap: 12px;
+            list-style: none;
+            margin-top: 30px;
+            /* margin-left: -40px; */
+            
+        }
+        .nav-menu li{
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 10px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            background-color: rgb(192, 79, 4);
+            color: white;
+            border-radius: 20px;
+           
+        }
+        .btn-signout{
+            background-color: rgb(192, 79, 4);
+            color: white;
+            padding: 10px;
+            border-radius: 20px;
+            margin-bottom: 20px;
+        }
+        .btn-signout span{
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        main{
+            background-color: rgb(220, 206, 206);
+            height: 100vh;
+            width: 100%;
+        }
+        main h1{
+            margin-top: 50px;
+            padding-left:50px ;
+        }
+        .tag-line{
+            padding-left: 50px;
+            font-size: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="sub-title">
+            <div>
+                <div class="appimg"><img src="./images/food-app.png" alt="">Food-App</div>
+            </div>
+            <ul class="nav-menu">
+                <li class="bi bi-gear">Dashboard</li>
+                <li class="bi bi-receipt">Orders</li>
+                <li class="bi bi-fork-knife">Restaurants</li>
+                <li class="bi bi-heart">Favorites</li>
+                <li class="bi bi-wallet">Wallet</li>
+            </ul>
+        </div>
+        <div>
+            <div>
+                <div class="btn-signout">
+                    <span class="bi bi-box-arrow-right">Signout</span>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <main>
+        <h1>Good Morning, Rachit!</h1>
+        <div class="tag-line">Here's what's happening with your orders today.</div>
+    </main>
+</body>
+
+</html>

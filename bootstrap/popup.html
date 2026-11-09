@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Popup</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</head>
+<body>
+    <header>
+        <div class="d-flex flex-row justify-content-between bg-light p-3">
+            <h3>Amazon</h3>
+            <div >
+                <button class=" btn p-1 bg-danger border rounded" data-bs-toggle="modal" data-bs-target="#login">
+                    <span class="bi bi-person"></span>
+                    Sign in
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <div class="modal fade" id="login">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <h3>User Login</h3>
+                    <span data-bs-dismiss="modal"></span>
+                </div>
+
+                <div class="modal-body">
+                    <dl>
+                        <dt>Username</dt>
+                        <dd><input type="text" placeholder="Username" class="form-control"></dd>
+
+                        <dt>Password</dt>
+                        <dd><input type="password" placeholder="Password" class="form-control"></dd>
+                    </dl>
+                </div>
+
+                <div class="modal-footer">
+                    <button class=" btn p-1 bg-danger border rounded">Login</button>
+                    <button class="btn bg-warning p-1 border rounded">Cancle</button>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>

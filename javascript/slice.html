@@ -1,0 +1,26 @@
+<script>
+    var contacts = "John-8585659871, David-9635729042";
+    var user = contacts.split(',')
+    var [john, david] = [user[0].split('-'), user[1].split('-')]
+    document.write(`David Mobile: ${david[1]}<br>`);
+    document.write(`John Mobile: ${john[1]}<br>`);
+
+    // seperate domail and ID without slicing
+    var email = prompt("Enter the eamil: ");
+    var atrdIndex = email.indexOf('@');
+    var id = email.substring(atrdIndex, 0);
+    var domain = email.substring(atrdIndex+1);
+    document.write(`Your id is ${id} and Domain is ${domain}<br>`);
+
+    // seperate domail and ID with slicing
+    var [id1, domain1] = email.split('@');
+    document.write(`Your id is ${id1} and Domain is ${domain1}<br>`);
+
+    //WAP first leetter must be in uppercase
+    var msg = prompt("Enter the message");
+    var fLatter = msg.charAt(0);
+    var rLatter = msg.slice(1)
+    document.write(`${fLatter.toUpperCase()+rLatter.toLowerCase()}`)
+
+
+</script>

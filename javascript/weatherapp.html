@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App </title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script src="../src/scripts/weather.js"></script>
+    <script>
+        
+        const api_key = "53b31c1d0be7ebda6dad82484f40ce4f"
+
+        function fetchWeather(cityName){
+
+            if(!cityName) return;
+
+            var api_url = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${api_key}&units=metric`;
+            
+            fetch(api_url)
+            .then(function(response){
+                return response.json();
+            })
+            .then(function(weatherObj){
+                if (weatherObj){
+                    document.getElementById("lblCity").innerHTML = weatherObj.name;
+                    document.getElementById("lblDescription").innerHTML = weatherObj.weather[0].description;
+                    document.getElementById("lblTemp").innerHTML = weatherObj.main.temp.toFixed(0) + "&deg;C";
+                    document.getElementById("lblHumidity").innerHTML = "Humidity: " + weatherObj.main.humidity + "%";
+                    document.getElementById("lblSpeed").innerHTML = "Wind: " + weatherObj.wind.speed + " m/s";
+                }else{
+                    alert("City not found!");
+                }
+            })
+            .catch(function(error){
+                console.log(error)
+            })
+            .finally(function(){
+                console.log("Request End")
+            })
+        }
+
+        function SearchClick(){
+                var cityName = document.getElementById("txtCity").value;
+                if(cityName === ""){
+                    alert("Enter City Name")
+                    return
+                }
+                fetchWeather(cityName)
+                
+            };
+
+            function LoadWeather() {
+            fetchWeather("Delhi"); // Default landing city
+        }
+    </script>
+</head>
+<body class="container-fluid bg-secondary" onload="LoadWeather()">
+    <header class="bg-light m-5 p-4 rounded rounded-2">
+        <div>
+            <div class="input-group">
+                <span class="input-group-text"> <span class="bi bi-geo-alt"></span> </span>
+                <input id="txtCity" type="text" class="form-control" placeholder="Your city name">
+                <button onclick="SearchClick()" class="btn btn-warning bi bi-search"></button>
+            </div>
+        </div>
+        <div class="d-flex justify-content-around mt-3">
+            <a href="javascript:CityWeather('Delhi')">Delhi</a>
+            <a href="javascript:CityWeather('Hyderabad')">Hyderabad</a>
+            <a href="javascript:CityWeather('Mumbai')">Mumbai</a>
+            <a href="javascript:CityWeather('Chennai')">Chennai</a>
+        </div>
+    </header>
+    <section class="m-5 p-5 bg-light">
+        <div class="card p-4">
+            <div class="card-header">
+                <span id="lblCity" class="fs-3 fw-bold"></span>
+                <div class="mt-2 fs-5 fw-bold fst-italic" id="lblDescription">
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col">
+                        <div class="bi bi-cloud fs-1"></div>
+                        <div id="lblTemp" class="fw-bold" style="font-size: 100px;">
+                        </div>
+                    </div>
+                    <div class="col d-flex flex-row justify-content-center align-items-center">
+                        <div class="card bg-dark text-white p-4" style="width: 130px;">
+                            <div id="lblHumidity" class="fs-5 fw-bold"></div>
+                        </div>
+                        <div class="card m-2 bg-dark text-white p-4" style="width: 170px;">
+                            <div id="lblSpeed" class="fs-5 fw-bold"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

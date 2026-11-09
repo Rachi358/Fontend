@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+
+        }
+        body{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            background-color: black;
+        }
+        .containar{
+            background-color: red;
+            width: 600px;
+            height: 600px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: left;
+            padding: 20px;
+            margin: 20px;
+            gap: 20px;
+            border: 1px solid white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;       
+            
+        }
+        .image{
+            background-image: url("../public/images/DevOps.jpg");
+            width: 200px;
+            height: 200px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            border: 2px solid;
+            
+        }
+        
+        .circle{
+            background-color: white;
+            width: 200px;
+            height: 200px;
+            border-radius: 100%;
+            border: 2px solid;
+        }
+
+    </style>
+
+</head>
+<body>
+    <div class="containar">
+        <div class="image">
+
+        </div>
+        <div class="circle">
+
+        </div>
+    </div>
+
+</body>
+</html>
