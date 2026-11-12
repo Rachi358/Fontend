@@ -38,6 +38,29 @@
 
     // Details(...["Product Details",1, 'Tv', 34000]);
 
-    
+
+
+    //5. Pure Functions:
+    // function Demo(param){
+    //     param = "Hello ! world";
+    //     document.write(param + "<br>");
+    // }
+    // Demo(10);
+    // Demo("A");
+    // Demo(['a', 'b']);
+    // Demo({id:2});
+
+
+
+    //6. Impure Functions:
+    var x = 5;
+    function Demo(param){
+        x += param
+        document.write(x , "<br>");
+    }
+   Demo(10);
+   Demo(10);
+   Demo(10);
+
 
 </script>
